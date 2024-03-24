@@ -2,32 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.videoModal {
+  @apply fixed top-0 h-screen bg-black/25  w-full;
+}
+
+
+.scrollbar-thin:-webkit-scrollbar {
+  width: 0px; /* Cacher la barre de défilement horizontale et verticale */
+  height: 0px;
+}
+
+/* Pour Firefox */
+.scrollbar-thin {
+  -ms-overflow-style: none; /* Cacher la barre de défilement dans IE et Edge */
+  overflow-y:-moz-hidden-none;/* Cacher la barre de défilement dans les autres navigateurs */
+  -ms-overflow-style: none; /* Cacher la barre de défilement dans IE et Edge */
+  overflow: -moz-scrollbars-none; /* Cacher la barre de défilement dans Firefox */
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
