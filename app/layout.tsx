@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Montserrat_Alternates} from "@/app/font";
+import { Montserrat_Alternates } from "./font";
 
 export const metadata: Metadata = {
   title: "Blockchain Foncier Goma",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children, 
 }: Readonly<{
   children: React.ReactNode;
 }>) {

@@ -25,13 +25,11 @@ interface surfaceConcessionprops {
 
 interface ConcessionImagePros {
     href: string[];
-    width: number;
     className ?: string;
 }
 
 export function ConcessionImage({
     href,
-    width,
     className,
 }: ConcessionImagePros) {
 
@@ -50,8 +48,8 @@ export function ConcessionImage({
     }
 
     return (
-        <div className={`relative w-[${width}] aspect-video flex 
-        items-end justify-center`}>
+        <div className={clsx(`relative aspect-video flex 
+        items-end justify-center`, className)}>
             <Image className={twMerge(`
                 w-full 
                 h-full 
@@ -149,9 +147,8 @@ export function CarteConcession({
             bg-white rounded-xl shadow-md
             hover:shadow-2xl transition">
             <ConcessionImage
-                className="rounded-t-xl"
+                className="rounded-t-xl w-[300px]"
                 href={href}
-                width={300}
             />
             <div className="flex flex-col gap-3 p-5">
                 <SurfaceConcession

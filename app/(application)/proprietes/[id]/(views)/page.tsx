@@ -1,21 +1,25 @@
-import { CarteConcession } from '@/app/ui/tableauDeBord/carteConcession';
 import { Concession } from '@/app/ui/proprietes/concession';
 import { TabConcession } from '@/app/ui/proprietes/tabConcession';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { ActionConcession } from '@/app/ui/proprietes/action';
 
 export default function Page({ params }: { params: { id: string } }) {
 
-    
+
     if (params.id !== "1234878902q324542432") {
         notFound();
     }
 
     return (
         <>
-            <h1 className="font-bold">
-                proprietes Goma / kituku / kivu / n° : 23
-            </h1>
+            <div className="flex justify-between 
+                items-center py-2
+            ">
+                <h1 className="font-bold text-sm">
+                    proprietes Goma / kituku / kivu / n° : 23
+                </h1>
+                <ActionConcession />
+            </div>
             <div className='w-full flex flex-col gap-2'>
                 <Concession
                     href={[
@@ -36,7 +40,7 @@ export default function Page({ params }: { params: { id: string } }) {
                             numeroTelephone: "0999999999"
                         },
                         image: "/images/kabila.png"
-                    }} 
+                    }}
                 />
                 <TabConcession />
             </div>

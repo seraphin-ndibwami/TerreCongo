@@ -30,9 +30,8 @@ export function Concession(props: ConcessionProps) {
         <div className="w-full flex flex-col sm:flex-row items-center sm:items-start gap-5">
             <div className="group w-full sm:w-3/4">
                 <ConcessionImage
-                    className="rounded-sm"
+                    className="rounded-sm "
                     href={props.href}
-                    width={500}
                 />
             </div>
             <div className="flex flex-row sm:flex-col flex-none  gap-4">
